@@ -1,14 +1,13 @@
 # my-first-project
-if (command == "giveaway") {
-    // !giveaway {time s/m/d} {item}
+if (command == "giveaway") 
+{ // !giveaway {time s/m/d} {item}
     const messageArray = message.content.split(" ");
     if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.channel.send("Du hast keine Rechte, um ein Giveaway zu starten!")
     var item = "";
     var time;
     var winnerCount;
     for (var i = 1; i < args.length; i++) {
-      item += (args[i] + " ");
-    }
+      item += (args[i] + " ");}
     time = args[0];
     if (!time) {
       return message.channel.send(`Diese Dauer ist ungültig!`);
@@ -20,7 +19,7 @@ if (command == "giveaway") {
     embed.setColor(0x3333ff);
     embed.setTitle("New Giveaway !");
     embed.setDescription("**" + item + "**");
-    embed.addField(`Duration : `, ms(ms(time), {
+    embed.addField(`Dauer : `, ms(ms(time), {
       long: true
     }), true);
     embed.setFooter("Reagiere mit 🎉  auf diese Nachricht, um teilzunehmen!");
