@@ -1,5 +1,6 @@
 # my-first-project
-if (command == "giveaway") 
+
+main if (command == "giveaway") 
 { // !giveaway {time s/m/d} {item}
     const messageArray = message.content.split(" ");
     if (!message.member.hasPermission(["ADMINISTRATOR"])) return message.channel.send("Du hast keine Rechte, um ein Giveaway zu starten!")
